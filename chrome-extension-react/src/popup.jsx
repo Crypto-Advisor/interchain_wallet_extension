@@ -1,12 +1,15 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from 'react-dom/client';
+import Wallet from "./components/wallet/Wallet";
 
-function Popup() {
-    return (
+const container = document.getElementById('react-target');
+const root = createRoot(container);
+
+root.render(
+    <div>
         <div>
-            <h1>Hello world!</h1>
+            <h1>StableMask</h1>
         </div>
-    )
-}
-
-render(<Popup />, document.getElementById("react-target"))
+        <Wallet />
+    </div>
+)
